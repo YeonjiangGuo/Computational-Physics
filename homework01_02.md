@@ -83,3 +83,7 @@ int main()
 	
 }
 ```
+* figures for different force
+![figure 1. b=0.9](http://on7yq9in2.bkt.clouddn.com/homework02_1.jpg)
+![figure 2. b=1.35](http://on7yq9in2.bkt.clouddn.com/homework02_2.jpg)
+If change b from 0.9 to 1.35 will get chaos.
