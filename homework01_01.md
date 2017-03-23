@@ -70,7 +70,6 @@ double funy_predictor_corrector(double h,double x,double y1)
 		yh[1]=y1+y2[2]*h;  
 	}  
 	while((yh[1]-yh[0])>0.00000001||(yh[0]-yh[1])>0.00000001);  
-	  
 	return(y2[2]);  
 }  
   
@@ -80,7 +79,6 @@ int main()
 	int i;  
 	y[0][0]=1.0;  
 	h=0.1;  
-	  
 	for(i=1;i<=N;i++)                                                           // use Eurel method  
 	{  
 		y[1][i-1]=funy_Euler((i-1)*h,y[0][i-1]);  
@@ -93,7 +91,6 @@ int main()
 	{  
 		cout<<"y("<<i*h<<") = "<<y[0][i]<<"  y'("<<i*h<<") = "<<y[1][i]<<'\n';  
 	}  
-	  
 	for(i=1;i<=N;i++)                                                           // use trapezoidal method  
 	{  
 		y[1][i-1]=funy_trapezoidal(h,(i-1)*h,y[0][i-1]);  
@@ -106,7 +103,6 @@ int main()
 	{  
 		cout<<"y("<<i*h<<") = "<<y[0][i]<<"  y'("<<i*h<<") = "<<y[1][i]<<'\n';  
 	}  
-	  
 	for(i=1;i<=N;i++)                                                            // use predictor(Euler)-corrector(trapezoidal)  
 	{  
 		y[1][i-1]=funy_predictor_corrector(h,(i-1)*h,y[0][i-1]);  
@@ -119,5 +115,4 @@ int main()
 	{  
 		cout<<"y("<<i*h<<") = "<<y[0][i]<<"  y'("<<i*h<<") = "<<y[1][i]<<'\n';  
 	}  
-	  
 }  
