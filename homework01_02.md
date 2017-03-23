@@ -1,5 +1,6 @@
 # homework 1
-## problem 2
+## problem2
+* code for problem 2
 ```
 #include <stdio.h>
 #include <stdlib.h>
