@@ -79,35 +79,35 @@ int main()
 	int i;  
 	y[0][0]=1.0;  
 	h=0.1;  
+	
 	for(i=1;i<=N;i++)                                                           // use Eurel method  
 	{  
 		y[1][i-1]=funy_Euler((i-1)*h,y[0][i-1]);  
 		y[0][i]=y[0][i-1]+h*y[1][i-1];  
 	}  
 	cout<<"result for Euler : "<<'\n'<<'\n';  
-	
 	for(i=0;i<N;i++)  
 	{  
 		cout<<"y("<<i*h<<") = "<<y[0][i]<<"  y'("<<i*h<<") = "<<y[1][i]<<'\n';  
 	}  
+	
 	for(i=1;i<=N;i++)                                                           // use trapezoidal method  
 	{  
 		y[1][i-1]=funy_trapezoidal(h,(i-1)*h,y[0][i-1]);  
 		y[0][i]=y[0][i-1]+h*y[1][i-1];  
 	}  
 	cout<<'\n'<<'\n'<<"result for trapezoidal : "<<'\n'<<'\n';  
-	
 	for(i=0;i<N;i++)  
 	{  
 		cout<<"y("<<i*h<<") = "<<y[0][i]<<"  y'("<<i*h<<") = "<<y[1][i]<<'\n';  
 	}  
+	
 	for(i=1;i<=N;i++)                                                            // use predictor(Euler)-corrector(trapezoidal)  
 	{  
 		y[1][i-1]=funy_predictor_corrector(h,(i-1)*h,y[0][i-1]);  
 		y[0][i]=y[0][i-1]+h*y[1][i-1];  
 	}  
 	cout<<'\n'<<'\n'<<"result for predictor(Euler)-corrector(trapezoidal) : "<<'\n'<<'\n';  
-	
 	for(i=0;i<N;i++)  
 	{  
 		cout<<"y("<<i*h<<") = "<<y[0][i]<<"  y'("<<i*h<<") = "<<y[1][i]<<'\n';  
