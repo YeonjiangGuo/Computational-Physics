@@ -27,9 +27,8 @@ y(0.3) = 1.26544  y'(0.3) = 0.768819
 y(0.4) = 1.34232  y'(0.4) = 0.727357  
 
 * code for problem 1
-...
-
-#include <stdio.h>  
+```
+#include <stdio.h>  
 #include <stdlib.h>  
 #include <math.h>  
 #include <iostream>  
@@ -114,4 +113,4 @@ int main()
 		cout<<"y("<<i*h<<") = "<<y[0][i]<<"  y'("<<i*h<<") = "<<y[1][i]<<'\n';  
 	}  
 }  
-...
+```
